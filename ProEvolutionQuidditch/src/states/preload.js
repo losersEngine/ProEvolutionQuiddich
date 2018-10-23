@@ -6,23 +6,20 @@ ProEvolutionQuidditch.preloadState.prototype = {
 
     preload: function() {
 
+        var letras = game.add.sprite(400, 300, 'loading1');
+        letras.scale.setTo(0.5,0.5);
+        letras.anchor.set(0.5);
+
         game.load.image('cleangame', 'assets/images/text/cleangame.png');
-        game.load.image('loading1', 'assets/images/text/loading1.png');
         game.load.image('loading2', 'assets/images/text/loading2.png');
 
-    },
-
-    create: function() {
-
-        var letras = game.add.sprite(80, 0, 'loading1');
-
         game.load.image('draco', 'assets/images/draco.png');
-        game.load.image('griffindor', 'assets/griffindor.png');
+        game.load.image('griffindor', 'assets/images/griffindor.png');
         game.load.image('harry', 'assets/images/harry.png');
-        game.load.image('referee', 'assets/referee.png');
-        game.load.image('slytherin', 'assets/slytherin.png');
-        game.load.image('snitch', 'assets/snitch.png');
-        game.load.image('trophy', 'assets/trophy.png');
+        game.load.image('referee', 'assets/images/referee.png');
+        game.load.image('slytherin', 'assets/images/slytherin.png');
+        game.load.image('snitch', 'assets/images/snitch.png');
+        game.load.image('trophy', 'assets/images/trophy.png');
         
         game.load.image('player1', 'assets/images/text/player1.png');
         game.load.image('player2', 'assets/images/text/player2.png');
@@ -43,7 +40,13 @@ ProEvolutionQuidditch.preloadState.prototype = {
 
     },
 
-    update: function() {
+    create: function() {
+
         game.state.start('menuState');
+		
+    },
+
+    update: function() {
+        
     }
 }
