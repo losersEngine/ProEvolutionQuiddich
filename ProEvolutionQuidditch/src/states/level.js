@@ -17,7 +17,7 @@ ProEvolutionQuidditch.levelState.prototype = {
 
     create: function() {
 
-        this.harry = this.game.add.sprite(5, 0, 'harry', 0);
+        this.harry = this.game.add.sprite(400, 200, 'harry', 0);
         this.game.physics.arcade.enable(this.harry);
         this.harry.body.setSize(16, 16, 0, 0);
         this.snitch = this.game.add.sprite(0,0,'snitch',0);
