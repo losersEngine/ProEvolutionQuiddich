@@ -66,8 +66,10 @@ ProEvolutionQuidditch.levelState.prototype = {
     },
     randomPosition: function(){
 
-        this.snitch.x = Math.floor((Math.random() * 800) + 1);
-        this.snitch.y = Math.floor((Math.random() * 600) + 1);
+        let x =  Math.floor((Math.random() * 800) + 1);
+        let y = Math.floor((Math.random() * 600) + 1);
+
+        this.snitch.position.setTo(x,y);
 
     },
     checkKeys: function(){
